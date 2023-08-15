@@ -294,10 +294,6 @@ if __name__ == "__main__":
             ).style(height=256, width=256),
             gr.components.Text(label="AV-HuBERT Output"),
         ],
-        examples = [
-            [None, "muavic_internal/demo/examples/jeff3_low.mp4", None, None],
-            [None, "muavic_internal/demo/examples/fr_example_subtitled.mp4", None, None],
-        ],
         allow_flagging="never",
     )
     
@@ -306,4 +302,4 @@ if __name__ == "__main__":
         interface_list=[webcam_interface, upload_interface],
         tab_names=["Record Video", "Upload Video"]
     )
-    iface.queue().launch(debug=False, show_error=True)
+    iface.queue().launch(debug=False, show_error=True, share=True)

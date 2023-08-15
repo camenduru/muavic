@@ -175,11 +175,11 @@ def load_needed_models_for_lip_movement(metadata_path):
     # load landmark predictor
     logger.debug("Loading shape predictor!")
     filename = "shape_predictor_68_face_landmarks.dat"
-    download_extract_file_if_not(
-        url=f"http://dlib.net/files/{filename}.bz2",
-        tgz_filepath=metadata_path/f"{filename}.bz2",
-        download_filename=filename
-    )
+    # download_extract_file_if_not(
+    #     url=f"http://dlib.net/files/{filename}.bz2",
+    #     tgz_filepath=metadata_path/f"{filename}.bz2",
+    #     download_filename=filename
+    # )
     shape_predictor_path = metadata_path / filename
     predictor = dlib.shape_predictor(str(shape_predictor_path))
     # load metadata
